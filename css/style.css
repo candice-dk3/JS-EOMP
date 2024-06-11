@@ -106,6 +106,48 @@ h3.text{
     margin-top: -23px;
 }
 
+/* About sect */
+.about-sec {
+    background-image: url(https://github.com/candice-dk3/JS-EOMP-Images/blob/main/img-transparent.png?raw=true);
+    background-repeat: no-repeat;
+    width: 1500px;
+    height: 1500px;
+    background-position: center;
+    background-size: contain;
+}
+.h1-text{
+    margin-top: 150px;
+    color: white;
+    font-size: 48px;
+    text-align: left;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+.p-text1{
+    color: white;
+    font-size: 32px;
+    text-align:left;
+    margin-left: 150px;
+}
+.p-text2{
+    color: white;
+    font-size: 32px;
+    text-align:left;
+    margin-left: 150px;
+}
+.p-text3{
+    color: white;
+    font-size: 32px;
+    text-align:left;
+    margin-left: 150px;
+}
+.p-text4{
+    color: white;
+    font-size: 32px;
+    text-align:left;
+    margin-left: 150px;
+}
+
 /* perfume sect */
 
 
