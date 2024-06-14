@@ -21,9 +21,6 @@
                           <a class="navbar-brand" href="../index.html">
                             <img class="img" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/logo.png?raw=true" alt="" width="200">
                           </a>
-                        <div class="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        </div>
                         </div>
                         <div class="sign-in">
                             <p class="sign-in-text"><a style="text-decoration: none; color:black; font-size: 20px; font-weight: 700;" href="../html/login.html" target="login">Sign in</a></p>
@@ -54,131 +51,38 @@
         </section>
     </section>
 
-    <main>
-        <section class="products-items">
-            <h4 class="h4-product-text">Results For : 'All Products'</h4>
-            <h5 class="h5-product-text">Sort by : Relevance</h5>
-            <div class="row">
-                <div class="col-4">
-                    <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img1" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/indulge.png?raw=true" alt="">
-                    <h2 id="product-name">Indulge 60ml</h2>
-                    <p><span id="product-price">R 120</span></p>
-                    <p>
-                    <label class="quantity" for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart">Add to Cart</button>                        
+<main id="product-cards">
+            <BR></BR><BR></BR>
+            <div id="search-div">
+                <input type="text" id="searchInput" placeholder="Search by name...">
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option value="Min-Max">Min-Max</option>
+                    <option value="Max-Min">Max-Min</option>
+                    <option value="A-Z">A-Z</option>
+                </select>
+                <button id="searchButton">Search</button>
+            </div>
+            <div id="itemList"></div>
+            <div>
+                <div class="product-grid">
+                </div>
+            </div>
+            <div id="modal-id">
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img id="modal-image" src="" alt="Product Image">
+                        <div class="modal-details">
+                            <h2 id="modal-name"></h2>
+                            <p id="modal-category"></p>
+                            <p id="modal-description"></p>
+                            <p id="modal-price"></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-4">
-                  <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img2" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/black-onyx.png?raw=true" alt="">
-                    <h2 id="product-name">Black Onyx 100ml</h2>
-                    <p><span id="product-price">R 100</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart">Add to Cart</button>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img3" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/olympea.png?raw=true" alt="">
-                    <h2 id="product-name">Olympea 80ml</h2>
-                    <p><span id="product-price">R 100</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart">Add to Cart</button>
-                  </div>
-                </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                  <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img1"src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/body-mist-1.png?raw=true" alt="">
-                    <h2 id="product-name">Victoria Secret - Rush <br>
-                        250ml</h2>
-                    <p><span id="product-price">R 230</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                  <button id="add-to-cart">Add to Cart</button>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div>
-                    <img class="img2"src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/body-mist-2.png?raw=true" alt="">
-                    <h2 id="product-name">Victoria Secret - Love <br>
-                        Spell   250ml</h2>
-                    <p><span id="product-price">R 230</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart">Add to Cart</button>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img3"src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/body-mist-3.png?raw=true" alt="">
-                    <h2 id="product-name">Victoria Secret - Pure <br>
-                        Seduction   250ml</h2>
-                    <p><span id="product-price">R 230</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart">Add to Cart</button>
-                  </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                  <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img1"src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/body-lotion-1.png?raw=true" alt="">
-                    <h2 id="product-name">Coco Lotion Body <br>
-                        Lotion  414ml</h2>
-                    <p><span id="product-price">R 350</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart">Add to Cart</button>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img2"src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/body-lotion-2.png?raw=true" alt="">
-                    <h2 id="product-name">Water Lotion Body <br>
-                        Lotion  414ml</h2>
-                    <p><span id="product-price">R 350</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart">Add to Cart</button>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <div class="product" data-name="Indulge" data-price="120.00">
-                    <img class="img3"src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/body-lotion-3.png?raw=true" alt="">
-                    <h2 id="product-name">Rosewater Lotion <br>
-                        Body Lotion  414ml</h2>
-                    <p><span id="product-price">R 350</span></p>
-                    <p>
-                      <label class="quantity" for="quantity">Quantity:</label>
-                      <input type="number" id="quantity" name="quantity" min="1" value="">
-                    </p>
-                    <button id="add-to-cart" >Add to Cart</button>
-                  </div>
-                </div>
-            </div>
-        </section>
+
        <section class="footer-img">
         <div class="container text-center">
             <div class="row">

@@ -21,9 +21,6 @@
                           <a class="navbar-brand" href="../index.html">
                             <img class="img" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/logo.png?raw=true" alt="" width="200">
                           </a>
-                        <div class="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        </div>
                         </div>
                         <div class="sign-in">
                             <p class="sign-in-text"><a style="text-decoration: none; color:black; font-size: 20px; font-weight: 700;" href="../html/login.html" target="login">Sign in</a></p>
@@ -54,50 +51,51 @@
         </section>
     </section>
 <main>
-    <section class="cart-page">
-    <h2>Shopping Cart</h2>
-    <div id="cart">
-        <ul id="cart-items"></ul>
-        <p>Total Items: <span id="total-items">0</span></p>
-        <p>Total Price: $<span id="total-price">0.00</span></p>
-    </div>
-    </section> 
-</main>
-
-<footer id="footer">
-    <div class="container text-center fixed-bottom">
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-2">
-            <div id="footer-text">
-              <h4>Customer Service</h4>
-              <p >Return and Refund</p>
-              <p>Terms and Conditions</p>
-              <p>Loyalty terms and Conditions</p>
-              <p>Policy page</p>
-              <p>Order Processing</p>
-              <p>Shipping Options</p>  
+  <div id="cart-container">
+    <tbody id="cart-items">
+  </tbody>
+  <tfoot>
+      <tr>
+          <td colspan="3" class="text-end"><strong>Total Amount:</strong></td>
+          <td colspan="2" id="total-amount" class="text-center">R 0.00</td>
+      </tr>
+  </tfoot>
+  </div>
+  </main>
+  
+  <footer id="footer">
+      <div class="container text-center ">
+          <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+              <div id="footer-text">
+                <h4>Customer Service</h4>
+                <p >Return and Refund</p>
+                <p>Terms and Conditions</p>
+                <p>Loyalty terms and Conditions</p>
+                <p>Policy page</p>
+                <p>Order Processing</p>
+                <p>Shipping Options</p>  
+              </div>
             </div>
-          </div>
-          <div class="col-4"></div>
-          <div class="col-2"></div>
-          <div class="col-2">
-            <div id="footer-text">
-              <h4>Scent Sensation</h4>
-              <a style="text-decoration: none; color: white;" href="/JS-EOMP/html/contact.html"><p>Contact Us</p></a>
-              <a style="text-decoration: none; color: white;" href="/JS-EOMP/html/about.html"><p>About Us</p></a>
+            <div class="col-4"></div>
+            <div class="col-2"></div>
+            <div class="col-2">
+              <div id="footer-text">
+                <h4>Scent Sensation</h4>
+                <a style="text-decoration: none; color: white;" href="/JS-EOMP/html/contact.html"><p>Contact Us</p></a>
+                <a style="text-decoration: none; color: white;" href="/JS-EOMP/html/about.html"><p>About Us</p></a>
+              </div>
             </div>
+            <div class="col-1"></div>
           </div>
-          <div class="col-1"></div>
         </div>
-      </div>
-  </footer>
-
-<div class="copyright-text fixed-bottom">
+    </footer>
+<div class="copyright-text">
     <h6 class="ss-footer">Copyright © Scent Sensation 2024 | All right reserved</h6>   
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../script/cart.js"></script>
+    <script src="../script/checkout.js"></script>
 </body>
 </html>
