@@ -24,7 +24,7 @@ function updateCartDisplay() {
 }
 
 document.getElementById("add-to-cart").addEventListener("click", () => {
-    const item = { };
+    const item = '';
     addItemToCart(item);
   });
 

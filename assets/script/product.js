@@ -150,19 +150,7 @@ function displayItems(items) {
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${item.name} has been added to your cart.`);
   }
-function addToCart(id) {
-    let items = JSON.parse(localStorage.getItem('items'));
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let item = items.find(item => item.id == id);
-    let cartItem = cart.find(item => item.id == id);
-    if (cartItem) {
-        cartItem.quantity += 1;
-    } else {
-        cart.push({...item, quantity: 1});
-    }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${item.name} has been added to your cart.`);
-}
+  
 displayItems(items);
 document.getElementById('searchButton').addEventListener('click', () => {
     let searchInput = document.getElementById('searchInput').value.toLowerCase();
