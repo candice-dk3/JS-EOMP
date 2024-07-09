@@ -115,6 +115,8 @@ h3.text{
     margin-left: 150px;
 }
 
+
+
 /* Product sect */
 .product-grid {
     display: flex;
@@ -141,18 +143,16 @@ h3.text{
     text-align: center;
     font-weight: bold;
 }
-.modal {
+/* .modal {
     position: fixed;
-  }
+  } */
 .modal-content {
     padding: 20px;
     background-color: #FEFEFE;
     margin: 0 auto;
-    padding: 2%;
     border: 1px solid #888;
-    width: 50%;
-    position: relative;
-    max-height: 80%;
+    height: 500px;
+    width: 300px;
     overflow-y: hidden;
 }
 
@@ -170,7 +170,8 @@ h3.text{
     cursor: pointer;
 }
 .modal-details {
-    text-align: left;
+    text-align: center;
+    align-items: center;
 }
 .modal-details h2 {
     margin-top: 0;
@@ -197,7 +198,7 @@ h3.text{
 }
 
 
-/* perfume sect */
+/* perfume sect
 .perfume-page-text{
     color: white;
     margin-top: 30px;
@@ -227,9 +228,9 @@ h3.text{
 .btn :hover{
     color: #96005A;
     background-color: #000000;
-}
+} */
 
-/* body mist sect */
+/* body mist sect
 .body-mist-page-img{
     width: 650px;
     height: 410px;
@@ -247,10 +248,10 @@ h3.text{
     text-align: left;
     margin-top: 80px;
     font-size: 30px;
-}
+} */
 
 
-/* body lotion sect */
+/* body lotion sect
 .body-lotion-page-img{
     height: 376px;
     width: 806px;
@@ -271,7 +272,7 @@ h3.text{
 }
 a .body-lotion-link{
     margin-top: 40px;
-}
+} */
 
 /* Checkout  */
 #cart-body {
