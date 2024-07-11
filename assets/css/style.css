@@ -1,3 +1,6 @@
+@import url('./navbar.css');
+
+
 *{
     margin: 0;
  }
@@ -26,7 +29,9 @@ html{
 }
 .container-header{
     border: #C2922F 2px solid;
-    margin-top: 200px;
+    margin-top: 130px;
+    width: 1500px;
+    margin-left: 40px;
 }
 .text{
     color: white;
@@ -35,10 +40,10 @@ html{
     border: #96005A 5px solid;
     width: 200px;
     margin-left: 70px;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 20px;
 }
-h3.text{
+.text{
     text-align: center;
 }
 .home-page-img{
@@ -46,31 +51,65 @@ h3.text{
     margin-bottom: 40px;
 }
 .us{
-    display: flex;
-    justify-content: center;
     margin-top: 50px;
+    margin-right: 200px;
+    text-decoration: none;
+    color: white;
+    font-size: 36px
 }
 .about-us{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 300px;
 }
 .body-lotion-link{
-    margin-bottom: 5px;
+    margin-top: 100px;
 }
 .footer-img{
     margin-top: 100px;
     margin-bottom: 50px;
 }
-.search{
-    display: flex;
-    margin-right: 10cqi;
-    margin-top: -30px;
-}
 .h6-text{
-    margin-left: -150px;
-    margin-top: -23px;
+    text-decoration: underline;
+    text-align: center;
+    width: 500px;
 }
+.pop-items{
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.popular-items{
+    margin-bottom: 60px;
+    margin-left: 250px;
+}
+.category{
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.popular-items .col-2 {
+    margin: 40px;
+}
+.popular-item-img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 7px;
+    transition-duration: 1s;
+}
+.popular-item-img:hover{
+    transform: scale(1.1);
+}
+.pop-text{
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
 
 /* About sect */
 .about-sec {
@@ -119,14 +158,15 @@ h3.text{
 
 /* Product sect */
 .product-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
 } 
 .product-card {
     margin: 10px;
     display: inline-block;
     text-align: center;
+    margin-top: 40px;
 }
 .product-card p {
     text-align: center;
@@ -143,16 +183,22 @@ h3.text{
     text-align: center;
     font-weight: bold;
 }
-/* .modal {
-    position: fixed;
-  } */
+.op-h1{
+    color: white;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.modal {
+    position: relative;
+  }
 .modal-content {
     padding: 20px;
     background-color: #FEFEFE;
-    margin: 0 auto;
+    margin-top: 160px;
+    /* margin-left: 500px; */
     border: 1px solid #888;
     height: 500px;
-    width: 300px;
+    width: 600px;
     overflow-y: hidden;
 }
 
@@ -186,8 +232,27 @@ h3.text{
     object-fit: contain;
 }
 #search-div{
-    margin-top: 150px;
+    margin-top: 100px;
+    margin-left: 92px;
+    margin-bottom: 20px;
     width: 200px;
+}
+#searchButton{
+    background-color: #c7922a;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#categoryFilter{
+    background-color: #96005A;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+}
+#searchInput{
+    background-color: #96005A;
+    color: white;
+    margin-top: 20px;
+    height: 40px;
 }
 .form-control{
     margin-left: 1000px;
@@ -196,7 +261,13 @@ h3.text{
     margin-top: -25px;
     margin-left: 1200px;
 }
-
+button.view-more-btn{
+    width: 300px;
+}
+button.purchase{
+    width: 300px;
+    margin-bottom: 50px;
+}
 
 /* perfume sect
 .perfume-page-text{
@@ -291,12 +362,6 @@ background: #96005A;
 width: 100%;
 height: 80px;
 }
-.search-admin-page{
-display: flex;
-margin-right: 100cqi;
-margin-top: -40px;
-height: 30px;
-}
 .admin-page-on{
 margin-right: 500px;
 }
@@ -308,10 +373,10 @@ margin-right: 500px;
     margin-left: 200px;
 }
 .table {
-    width: 500px;
+    width: 550px;
     background-color: #fff;
     border-collapse: collapse;
-    margin-top: 500px;
+    margin-top: 50px;
 }
 .table th, .table td {
     padding: 1%;
@@ -323,10 +388,10 @@ margin-right: 500px;
     background-color: #F8F9FA;
 }
 .admin-page-table{
-    margin-top: 200px;
-    width: 1000px;
+    margin-top: 60px;
+    width: 1200px;
     display: grid;
-    justify-content: center0;
+    justify-content: center;
 }
 .quantity-buttons {
     display: flex;
@@ -394,7 +459,7 @@ margin-right: 500px;
 
 /* Contact Page */
 .contact-page-sec{
-    background-image: url(https://github.com/candice-dk3/JS-EOMP-Images/blob/main/bg-1.png?raw=true);
+    background-image: url('https://github.com/candice-dk3/JS-EOMP/blob/main/assets/images/bg.png?raw=true');
     background-repeat: no-repeat;
     width: 1500px;
     height: 1500px;
@@ -414,7 +479,7 @@ form {
     background-color: #96005a83 ;
     padding: 20px;
     border-radius: 40px;
-    width: 340px;
+    width: 400px;
     margin-left: 600px;
     margin-top: 40px;
 }
@@ -424,12 +489,26 @@ label {
     margin-bottom: 5px;
     font-weight: bold;
 }
+input{
+    background-color: #96005A;
+    height: 50px;
+    width: 300px;
+    border: none;
+    border-radius: 30px;
+}
+textarea{
+    background-color: #96005A;
+    border: none;
+    border-radius: 20px;
+    width: 360px;
+    height: 200px;
+}
 
-input, textarea {
+/* input, textarea {
     width: 100%;
     border: none;
     border-radius: 5px;
-}
+} */
 
 button {
     width: 100%;
@@ -453,4 +532,14 @@ button:hover {
 .message{
     height: 200px;
     margin-bottom: 20px
+}
+
+
+@media screen and (max-width: 1024px){
+}
+
+@media screen and (max-width: 768px){
+}
+
+@media screen and (max-width: 390px){
 }

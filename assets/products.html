@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CK JS-EOMP</title>
-    <link rel="stylesheet" href=" css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
 
@@ -19,64 +19,62 @@
         <section class="inner-home-sec">
             <div class="fixed-top">
                 <div id="nav">
-                  <nav class="navbar">
-                    <div class="logo">
-                      <a class="navbar-brand" href="index.html">
-                        <img class="img" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/logo.png?raw=true" alt="" width="200">
-                      </a>
+                  <nav class="navigation-bar">
+                    <a href="index.html"> <img class="image-div" src="/assets/images/scent-logo 1.png" alt=""></a>
+                    <div class="nav-links">
+                        <a href="products.html">Perfume</a>
+                        <a href="products.html">Body Mist</a>
+                        <a href="products.html">Body Lotion</a>
                     </div>
-                    <div class="details">
-                      <ul class="nav-links">
-                        <li><a href="products.html" style="color: black; text-decoration: none;">Perfume</a></li>
-                        <li><a href="products.html" style="color: black; text-decoration: none;">Body Mist</a></li>
-                        <li><a href="products.html" style="color: black; text-decoration: none;">Body Lotion</a></li>
-                      </ul>
+                    <div class="admin-sec">
+                        <div class="inner-text r">
+                            <a href="login.html">Sign In</a>
+                        </div>
+                        <div>
+                            <a href="checkout.html" style="color: black; text-decoration: none;"><i class="las la-shopping-cart"></i></a>
+                        </div>
+                        <div class="inner-text">
+                            <a style="color: white;" href="admin.html">Admin</a>
+                        </div>
                     </div>
-                    <div class="sca">
-                      <ul>
-                        <li><a href="login.html" style="color: black; text-decoration: none;"><h3>Sign In</h3></a></li>
-                        <li><a href="checkout.html" style="color: black; text-decoration: none;"><i class="las la-shopping-cart"></i></a></li>
-                        <li><a href="admin.html" style="color: white; text-decoration: none;"><h3>Admin</h3></a></li>
-                      </ul>
-                    </div>
-                  </nav>
+                </nav>
                 </div>
             </div>
         </section>
     </section>
+    
+    <main id="product-cards">
+        <div id="search-div">
+          <input type="text" id="searchInput" placeholder="Search by name...">
+          <select id="categoryFilter">
+            <option value="">All Categories</option>
+            <option value="Perfume">Perfume</option>
+            <option value="Body Mist">Body Mist</option>
+            <option value="Body Lotion">Body Lotion</option>
+          </select>
+          <button id="searchButton">Search</button>
+        </div>
+        <div id="itemList"></div>
+        <h1 class="op-h1">Our products</h1>
+        <div>
+            <div class="product-grid"></div>
+        </div>
+        <div id="modal-id">
+          <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+              <div class="modal-details">
+                 <img id="modal-image" src="" alt="Product Image">
+                  <h2 id="modal-name"></h2>
+                  <p id="modal-category"></p>
+                  <p id="modal-description"></p>
+                  <p id="modal-price"></p>
+              </div>
+             </div>
+          </div>
+        </div>
 
-<main id="product-cards">
-            <BR></BR><BR></BR>
-            <div id="search-div">
-                <input type="text" id="searchInput" placeholder="Search by name...">
-                <select id="categoryFilter">
-                    <option value="">All Categories</option>
-                    <option value="Perfume">Perfume</option>
-                    <option value="Body Mist">Body Mist</option>
-                    <option value="Body Lotion">Body Lotion</option>
-                </select>
-                <button id="searchButton">Search</button>
-            </div>
-            <div id="itemList"></div>
-            <div>
-                <div class="product-grid"></div>
-            </div>
-            <div id="modal-id">
-                <div id="myModal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <div class="modal-details">
-                        <img id="modal-image" src="" alt="Product Image">
-                            <h2 id="modal-name"></h2>
-                            <p id="modal-category"></p>
-                            <p id="modal-description"></p>
-                            <p id="modal-price"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-       <section class="footer-img">
+      <section class="footer-img">
         <div class="container text-center">
             <div class="row">
               <div class="col-2">
@@ -99,7 +97,7 @@
               </div>
             </div>
           </div>
-    </section> 
+      </section> 
     </main>
     
 

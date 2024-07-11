@@ -20,27 +20,25 @@
         <section class="inner-home-sec">
             <div class="fixed-top">
                 <div id="nav">
-                  <nav class="navbar">
-                    <div class="logo">
-                      <a class="navbar-brand" href="index.html">
-                        <img class="img" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/logo.png?raw=true" alt="" width="200">
-                      </a>
+                  <nav class="navigation-bar">
+                    <a href="index.html"> <img class="image-div" src="/assets/images/scent-logo 1.png" alt=""></a>
+                    <div class="nav-links">
+                        <a href="products.html">Perfume</a>
+                        <a href="products.html">Body Mist</a>
+                        <a href="products.html">Body Lotion</a>
                     </div>
-                    <div class="details">
-                      <ul class="nav-links">
-                        <li><a href="products.html" style="color: black; text-decoration: none;">Perfume</a></li>
-                        <li><a href="products.html" style="color: black; text-decoration: none;">Body Mist</a></li>
-                        <li><a href="products.html" style="color: black; text-decoration: none;">Body Lotion</a></li>
-                      </ul>
+                    <div class="admin-sec">
+                        <div class="inner-text r">
+                            <a href="login.html" target="_blank">Sign In</a>
+                        </div>
+                        <div>
+                            <a href="checkout.html" style="color: black; text-decoration: none;"><i class="las la-shopping-cart"></i></a>
+                        </div>
+                        <div class="inner-text">
+                            <a style="color: white;" href="admin.html">Admin</a>
+                        </div>
                     </div>
-                    <div class="sca">
-                      <ul>
-                        <li><a href="login.html" style="color: black; text-decoration: none;"><h3>Sign In</h3></a></li>
-                        <li><a href="checkout.html" style="color: black; text-decoration: none;"><i class="las la-shopping-cart"></i></a></li>
-                        <li><a href="admin.html" style="color: white; text-decoration: none;"><h3>Admin</h3></a></li>
-                      </ul>
-                    </div>
-                  </nav>
+                </nav>
                 </div>
             </div>
         </section>
@@ -51,16 +49,16 @@
             <div class="form">
               <form action="https://formspree.io/f/mvoedpoj" method="POST">
                 <div class="name">
-                  <label>Your Name: <input type="name" name="name"></label>
+                  <label><input type="name" name="name" placeholder="Full-Name:"></label>
                 </div>
                 <div class="email">
-                  <label>Your Email: <input type="email" name="email"></label>
+                  <label><input type="email" name="email" placeholder="example@gmail.com"></label>
                 </div>
                 <div class="number">
-                  <label>Your phone-Number: <input type="phone-number" name="phone-number"></label>
+                  <label><input type="phone-number" name="phone-number" placeholder="012 345 6789"></label>
                 </div>
                 <div class="message">
-                  <label>Your message:<textarea name="message"></textarea></label>
+                  <label><textarea name="message" placeholder="Your message:"></textarea></label>
                 </div>
                 <button type="submit">Send</button>
             </form>

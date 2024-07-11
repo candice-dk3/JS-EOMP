@@ -17,53 +17,48 @@
   </head>
 <body>
     <section class="home-sec">
-        <section class="inner-home-sec">
             <div class="fixed-top">
                 <div id="navbar-admin-page">
-                    <nav class="navbar-admin-page">
-                        <div class="container">
-                          <a class="navbar-brand" href="index.html">
-                            <img class="img" src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/logo.png?raw=true" alt="" width="200">
-                          </a>
-                        <div class="admin-page-on">
-                           <a style="text-decoration: none; color: white;" href="admin.html">Admin</a>
+                  <nav class="navigation-bar">
+                    <a href="index.html"> <img class="image-div" src="/assets/images/scent-logo 1.png" alt=""></a>
+                    <div class="admin-sec">
+                        <div class="inner-text">
+                            <a style="color: white;" href="admin.html">Admin</a>
                         </div>
-                        </div>
-                    </nav>
+                    </div>
+                </nav>
                 </div>
             </div>
-        </section>
     </section>
-</section>
+
+<div class="modal fade" id="adminAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Add a New Item</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="form">
+            <div class="container">
+              <input class="form-control m-2" type="text" placeholder="Enter item name" name="addName" id="addName" required>
+              <input class="form-control m-2" type="text" placeholder="Enter item category" name="addCategory" id="addCategory" required >
+              <input class="form-control m-2" type="text" placeholder="Enter item color" name="addColor" id="addColor" required >
+              <textarea class="form-control m-2" placeholder="Enter item description" name="addDescription" id="addDescription" required></textarea>
+              <input class="form-control m-2" type="number" placeholder="Enter item price" name="addPrice" id="addPrice" required >
+              <input class="form-control m-2" type="url" placeholder="Enter image url" name="addImage" id="addImage" required >
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal"><span class="text-light">Close</span></button>
+          <button type="button" class="btn btn-outline-success" id="saveProduct"><span class="text-light">Save Changes</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <main class="admin-page-table">
-   <div class="modal fade" id="adminAddProduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-       <div class="modal-dialog">
-         <div class="modal-content">
-           <div class="modal-header">
-             <h1 class="modal-title fs-5" id="staticBackdropLabel">Add a New Item</h1>
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           </div>
-           <div class="modal-body">
-             <form class="form">
-               <div class="container">
-                 <input class="form-control m-2" type="text" placeholder="Enter item name" name="addName" id="addName" required>
-                 <input class="form-control m-2" type="text" placeholder="Enter item category" name="addCategory" id="addCategory" required >
-                 <input class="form-control m-2" type="text" placeholder="Enter item color" name="addColor" id="addColor" required >
-                 <textarea class="form-control m-2" placeholder="Enter item description" name="addDescription" id="addDescription" required></textarea>
-                 <input class="form-control m-2" type="number" placeholder="Enter item price" name="addPrice" id="addPrice" required >
-                 <input class="form-control m-2" type="url" placeholder="Enter image url" name="addImage" id="addImage" required >
-               </div>
-             </form>
-           </div>
-           <div class="modal-footer">
-             <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal"><span class="text-light">Close</span></button>
-             <button type="button" class="btn btn-outline-success" id="saveProduct"><span class="text-light">Save Changes</span></button>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-    <main class="admin-page-table">
         <div class="container mt-5">
             <div class="row mt-3">
                 <table class="table table-responsive table-bordered">
