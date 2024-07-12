@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Habibi';
+}
+.navigation-bar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #96005A;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0px 3px 1px #C2922F;
+    align-items: center;
+    justify-items: center;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-links{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: #000;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.admin-sec{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    
+}
+.inner-text a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+.sign-in-button a{
+    border: 1px solid black;
+    padding: 8px 25px;
+    border-radius: 18px;
+}
+.sign-in-button a:hover{
+    background: black;
+    color: #fff !important;
+    border-radius: 18px;
+}
+.la-shopping-cart{
+    font-size: 30px;
+}
+.admin-text a{
+    padding: 8px 15px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 18px;
+}
+
+.amazon-header {
+    background-color: rgb(19, 25, 33);
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+}
+
+
+.header-link {
+display: inline-block;
+padding: 6px;
+border-radius: 2px;
+cursor: pointer;
+text-decoration: none;
+border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.header-link:hover {
+border: 1px solid white;
+}
+
+.cart-link {
+color: white;
+display: flex;
+align-items: center;
+position: relative;
+}
+
+.cart-icon {
+width: 40px;
+}
+
+.cart-text {
+margin-top: 12px;
+font-size: 15px;
+font-weight: 700;
+}
+
+
+.cart-quantity {
+    color: #C2922F;
+    font-size: 16px;
+    font-weight: 700;
+    position: absolute;
+    top: 3px;
+    left: 16px;
+    width: 26px;
+    text-align: center;
+}
