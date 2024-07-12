@@ -31,4 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderTable();
 });
+<<<<<<< HEAD
 
+=======
+>>>>>>> a2439cb2557293d0d66621dbf1da7fd04f0ee38a

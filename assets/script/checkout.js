@@ -11,7 +11,7 @@ function updateCartDisplay() {
 
   cart.forEach((item) => {
     const cartItemHTML = `
-      <div class="cart-item">
+      <div class="cart-items">
         <img src="${item.image}" alt="${item.name}">
         <h4>${item.name}</h4>
         <p>Quantity: ${item.quantity}</p>
@@ -24,7 +24,7 @@ function updateCartDisplay() {
 }
 
 document.getElementById("add-to-cart").addEventListener("click", () => {
-    const item = { };
+    const item = '';
     addItemToCart(item);
   });
 
