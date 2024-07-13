@@ -116,6 +116,9 @@ html{
     font-size: 22px;
     margin-top: 20px;
 }
+.home-sec{
+    margin-top: 120px;
+}
 
 
 /* About sect */
@@ -306,10 +309,10 @@ margin-right: 500px;
     align-content: center;
 }
 .table th {
-    background-color: #96005A;
+    background-color: #b5006d;
 }
 .admin-page-table{
-    margin-top: 0px;
+    margin-top: 40px;
     width: 1200px;
     display: grid;
     justify-content: center;
@@ -331,6 +334,19 @@ margin-right: 500px;
 /* .add-item{
     margin-top: 30px;
 } */
+button.btn{
+    color: white;
+    background-color: #b5006d;
+    margin-top: 60px;
+    margin-left: 200px;
+    border: none;
+ }
+ button.btn:hover{
+    background-color: #C2922F;
+    color: white;
+    border: none;
+}
+
 
             
 /* Login page */
@@ -382,13 +398,8 @@ margin-right: 500px;
 
 /* Contact Page */
 .contact-page-sec{
-    background-image: url('https://github.com/candice-dk3/JS-EOMP/blob/main/assets/images/bg.png?raw=true');
-    background-repeat: no-repeat;
-    width: 1500px;
-    height: 1500px;
-    background-position: center;
-    background-size: contain;
-    margin-top: 200px;
+    height: 700px;
+    margin-top: 120px;
 }
 .contact-h1{
     color: white;
@@ -622,3 +633,9 @@ button:hover {
     border-radius: 3px;
 }
 
+.footer-images{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 40px;
+    justify-items: center;
+}
