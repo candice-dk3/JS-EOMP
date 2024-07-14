@@ -479,10 +479,6 @@ button:hover {
 }
 
 
-*{
-    font-family: 'Habibi';
-}
-
 .hero-banner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

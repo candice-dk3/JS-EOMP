@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { cart, addToCart } from './data/cart.js';
 import { products } from './data/products.js';
 
@@ -87,6 +86,3 @@ document.getElementById('searchButton').addEventListener('click', () => {
     });
     displayItems(filteredItems);
 });
-=======
-
->>>>>>> a2439cb2557293d0d66621dbf1da7fd04f0ee38a

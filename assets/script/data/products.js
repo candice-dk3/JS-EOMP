@@ -108,7 +108,6 @@ function displayItems(items) {
     purchaseButtons.forEach(button => {
       button.addEventListener('click', (event) => {
         addToCart(event.target.value);
-        console.log(addToCart(event.target.value));
       });
     });
   }
