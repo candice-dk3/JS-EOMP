@@ -1,52 +1,14 @@
-import { cart, addToCart } from './data/cart.js';
-import { products } from './data/products.js';
+let cart = [];
 
-let productsHTML = '';
-
-products.forEach((product) => {
-  productsHTML += `
-  <div class="product-card">
-    <img src="${product.image}" alt="${product.name}">
-    <p>${product.name}</p>
-    <p>R ${product.price}</p>
-    <button class="view-more-btn" value="${product.id}">View More</button>
-    <button class="purchase  js-add-to-cart" value="${product.id}">Purchase</button>
-  </div>
-  `;
-  let viewMoreButtons = document.querySelectorAll('.view-more-btn');
-    viewMoreButtons.forEach(button => {
-      button.addEventListener('click', (event) => {
-        let id = event.target.value;
-        let selectedItem = items.find(item => item.id == id);
-        displayModal(selectedItem);
-      });
-    });
-});
-
-document.querySelector('.js-products-grid').innerHTML = productsHTML;
-
-function updateCartQuantity() {
-  let cartQuantity = 0;
-
-  cart.forEach((cartItem) => {
-    cartQuantity += cartItem.quantity;
-  });
-
-  document.querySelector('.js-cart-quantity')
-    .innerHTML = cartQuantity;
+function addToCart(itemId) {
+  let selectedItem = items.find(item => item.id == itemId);
+  cart.push(selectedItem);
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
-
-document.querySelectorAll('.js-add-to-cart')
-  .forEach((button) => {
-    button.addEventListener('click', () => {
-      const productId = button.dataset.productId;
-      addToCart(productId);
-      updateCartQuantity();
-    });
+document.getElementById('checkoutButton').addEventListener('click', () => {
+  window.location.href = 'checkout.html';
 });
 
-
-  
 let modal = document.getElementById('myModal');
 let closeBtn = document.querySelector('.close');
 closeBtn.addEventListener('click', () => {
@@ -72,8 +34,6 @@ function displayModal(item) {
   modalPrice.textContent = `Price: R ${item.price.toFixed(2)}`;
   modal.style.display = 'block';
 }
-
-
 
 // Search bar //
 document.getElementById('searchButton').addEventListener('click', () => {

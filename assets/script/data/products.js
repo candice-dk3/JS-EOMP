@@ -1,4 +1,4 @@
-function CreateItem(id, name, category, image, description, price) {
+export function CreateItem(id, name, category, image, description, price) {
   this.id = id;
   this.name = name;
   this.category = category;
@@ -6,6 +6,7 @@ function CreateItem(id, name, category, image, description, price) {
   this.description = description;
   this.price = price;
 }
+
 let item1 = new CreateItem(
   1,
   "Indulge 60ml",
@@ -79,78 +80,65 @@ let item9 = new CreateItem(
   350
 );
 
-let items = [item1, item2, item3, item4, item5, item6, item7, item8, item9];
+export let items = [item1, item2, item3, item4, item5, item6, item7, item8, item9];
 localStorage.setItem("items", JSON.stringify(items));
 
 function displayItems(items) {
-    let productGrid = document.querySelector('.product-grid');
-    productGrid.innerHTML = '';
-    items.forEach(item => {
-      productGrid.innerHTML += `
-        <div class="product-card">
-            <img src="${item.image}" alt="${item.name}">
-            <p>${item.name}</p>
-            <p>R ${item.price}</p>
-            <button class="view-more-btn" value="${item.id}">View More</button>
-            <button class="purchase" value="${item.id}">Purchase</button>
-        </div>
-      `;
+  let productGrid = document.querySelector('.product-grid');
+  productGrid.innerHTML = '';
+  items.forEach(item => {
+    productGrid.innerHTML += `
+      <div class="product-card">
+          <img src="${item.image}" alt="${item.name}">
+          <p>${item.name}</p>
+          <p>R ${item.price}</p>
+          <button class="view-more-btn" value="${item.id}">View More</button>
+          <button class="purchase" value="${item.id}">Purchase</button>
+      </div>
+    `;
+  });
+  let viewMoreButtons = document.querySelectorAll('.view-more-btn');
+  viewMoreButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      let id = event.target.value;
+      let selectedItem = items.find(item => item.id == id);
+      displayModal(selectedItem);
     });
-    let viewMoreButtons = document.querySelectorAll('.view-more-btn');
-    viewMoreButtons.forEach(button => {
-      button.addEventListener('click', (event) => {
-        let id = event.target.value;
-        let selectedItem = items.find(item => item.id == id);
-        displayModal(selectedItem);
-      });
+  });
+  let purchaseButtons = document.querySelectorAll('.purchase');
+  purchaseButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      addToCart(event.target.value);
     });
-    let purchaseButtons = document.querySelectorAll('.purchase');
-    purchaseButtons.forEach(button => {
-      button.addEventListener('click', (event) => {
-        addToCart(event.target.value);
-      });
-    });
-  }
+  });
+}
 
-  let modal = document.getElementById('myModal');
-  let closeBtn = document.querySelector('.close');
-  closeBtn.addEventListener('click', () => {
+let modal = document.getElementById('myModal');
+let closeBtn = document.querySelector('.close');
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target == modal) {
     modal.style.display = 'none';
-  });
-
-  window.addEventListener('click', (event) => {
-    if (event.target == modal) {
-      modal.style.display = 'none';
-    }
-  });
-  function displayModal(item) {
-    let modalImage = document.getElementById('modal-image');
-    let modalName = document.getElementById('modal-name');
-    let modalCategory = document.getElementById('modal-category');
-    let modalDescription = document.getElementById('modal-description');
-    let modalPrice = document.getElementById('modal-price');
-    modalImage.src = item.image;
-    modalName.textContent = item.name;
-    modalCategory.textContent = `Category: ${item.category}`;
-    modalDescription.textContent = `Description: ${item.description}`;
-    modalPrice.textContent = `Price: R ${item.price.toFixed(2)}`;
-    modal.style.display = 'block';
   }
+});
 
-  function addToCart(id) {
-    let items = JSON.parse(localStorage.getItem('items'));
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let item = items.find(item => item.id == id);
-    let cartItem = cart.find(item => item.id == id);
-    if (cartItem) {
-      cartItem.quantity += 1;
-    } else {
-      cart.push({...item, quantity: 1});
-    }
-    localStorage.setItem('cart', JSON.stringify(cartItem));
-    alert(`${item.name} has been added to your cart.`);
-  }
-  
+function displayModal(item) {
+  let modalImage = document.getElementById('modal-image');
+  let modalName = document.getElementById('modal-name');
+  let modalCategory = document.getElementById('modal-category');
+  let modalDescription = document.getElementById('modal-description');
+  let modalPrice = document.getElementById('modal-price');
+  modalImage.src = item.image;
+  modalName.textContent = item.name;
+  modalCategory.textContent = `Category: ${item.category}`;
+  modalDescription.textContent = `Description: ${item.description}`;
+  modalPrice.textContent = `Price: R ${item.price.toFixed(2)}`;
+  modal.style.display = 'block';
+}
+
 displayItems(items);
 document.getElementById('searchButton').addEventListener('click', () => {
     let searchInput = document.getElementById('searchInput').value.toLowerCase();

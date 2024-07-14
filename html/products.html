@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CK JS-EOMP</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/navbar.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Habibi&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"></head>
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CK JS-EOMP</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Habibi&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<link rel="stylesheet"
+  href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
 <body>
   <div class="fixed-top">
     <nav class="navigation-bar">
       <a class="logo" href="/index.html">Scent Sensation</a>
       <div class="nav-links">
-          <a href="/html/products.html">Perfume</a>
-          <a href="/html/products.html">Body Mist</a>
-          <a href="/html/products.html">Body Lotion</a>
+        <a href="/html/products.html">Perfume</a>
+        <a href="/html/products.html">Body Mist</a>
+        <a href="/html/products.html">Body Lotion</a>
       </div>
       <div class="admin-sec">
-          <div class="inner-text ">
-              <a href="/html/login.html" target="_blank">Sign In</a>
-          </div>
-          <div >
-            <a class="cart-link header-link" href="/html/checkout.html">
-              <img class="cart-icon" src="/assets/images/icons/cart-icon.png">
-              <div class="cart-quantity js-cart-quantity">0</div>
-              <div class="cart-text">Cart</div>
-            </a>
-          </div>
-          <div class="inner-text admin-text">
-              <a href="/html/admin.html" target="_blank">Admin</a>
-          </div>
+        <div class="inner-text ">
+          <a href="/html/login.html" target="_blank">Sign In</a>
+        </div>
+        <div>
+          <a class="cart-link header-link" href="/html/checkout.html">
+            <img class="cart-icon" src="/assets/images/icons/cart-icon.png">
+            <div class="cart-quantity js-cart-quantity">0</div>
+            <div class="cart-text">Cart</div>
+          </a>
+        </div>
+        <div class="inner-text admin-text">
+          <a href="/html/admin.html" target="_blank">Admin</a>
+        </div>
       </div>
     </nav>
   </div>
-      
+
   <main id="product-cards">
-      <div id="search-div">
-        <input type="text" id="searchInput" placeholder="Search by name...">
-        <select id="categoryFilter">
-          <option value="">All Categories</option>
-          <option value="Perfume">Perfume</option>
-          <option value="Body Mist">Body Mist</option>
-          <option value="Body Lotion">Body Lotion</option>
-        </select>
-        <button id="searchButton">Search</button>
+    <div id="search-div">
+      <input type="text" id="searchInput" placeholder="Search by name...">
+      <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Perfume">Perfume</option>
+        <option value="Body Mist">Body Mist</option>
+        <option value="Body Lotion">Body Lotion</option>
+      </select>
+      <button id="searchButton">Search</button>
+    </div>
+    <div id="itemList"></div>
+    <h1 class="op-h1">Our products</h1>
+    <div class="main">
+      <div class="product-grid">
       </div>
-      <div id="itemList"></div>
-      <h1 class="op-h1">Our products</h1>
-      <div class="main">
-        <div class="product-grid">
-        </div>
-      </div>
-      <div id="modal-id">
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
-            <div class="modal-details">
-              <img id="modal-image" src="" alt="Product Image">
-                <h2 id="modal-name"></h2>
-                <p id="modal-category"></p>
-                <p id="modal-description"></p>
-                <p id="modal-price"></p>
-            </div>
+    </div>
+    <div id="modal-id">
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="modal-details">
+            <img id="modal-image" src="" alt="Product Image">
+            <h2 id="modal-name"></h2>
+            <p id="modal-category"></p>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
           </div>
         </div>
       </div>
+    </div>
 
     <section class="footer-img">
       <div class="footer-images">
-        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p1.png?raw=true" alt="" width="140px" height="140px">
-        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p2.png?raw=true" alt="" width="140px" height="140px">
-        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p3.png?raw=true" alt="" width="140px" height="140px">
-        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p4.png?raw=true" alt="" width="140px" height="140px">
-        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p5.png?raw=true" alt="" width="140px" height="140px">
-        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p6.png?raw=true" alt="" width="140px" height="140px">
+        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p1.png?raw=true" alt="" width="140px"
+          height="140px">
+        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p2.png?raw=true" alt="" width="140px"
+          height="140px">
+        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p3.png?raw=true" alt="" width="140px"
+          height="140px">
+        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p4.png?raw=true" alt="" width="140px"
+          height="140px">
+        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p5.png?raw=true" alt="" width="140px"
+          height="140px">
+        <img src="https://github.com/candice-dk3/JS-EOMP-Images/blob/main/p6.png?raw=true" alt="" width="140px"
+          height="140px">
       </div>
-    </section> 
+    </section>
   </main>
 
   <footer class="ss-footer">
@@ -96,19 +107,27 @@
         <p>Order Processing</p>
         <p>Shipping Options</p>
       </div>
-      <div class="second" >
+      <div class="second">
         <h4>Scent Sensation</h4>
-        <a href="/html/contact.html"><p>Contact Us</p></a>
-        <a href="/html/about.html"><p>About Us</p></a>
+        <a href="/html/contact.html">
+          <p>Contact Us</p>
+        </a>
+        <a href="/html/about.html">
+          <p>About Us</p>
+        </a>
       </div>
     </section>
     <section class="bottom-footer">
       <p>Copyright © Scent Sensation 2024 | All right reserved</p>
     </section>
   </footer>
-        
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      <script type="module" src="/assets/script/code.js"></script>
-      <script src="/assets/script/data/products.js"></script>
-  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script type="module" src="/assets/script/code.js"></script>
+  <script type="module" src="/assets/script/data/products.js"></script>
+  <!-- <script src="/assets/script/product.js"></script> -->
+</body>
+
 </html>
