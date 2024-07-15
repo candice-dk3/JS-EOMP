@@ -1,4 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart"));
+
 let cartTableBody = document.getElementById('cart-items');
 let totalPriceElement = document.getElementById('total-price');
 

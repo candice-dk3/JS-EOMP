@@ -51,19 +51,14 @@ html{
     margin-bottom: 40px;
 }
 .us{
-    margin-top: 50px;
-    margin-right: 200px;
-    text-decoration: none;
     color: white;
-    font-size: 36px
+    font-size: 36px;
+    text-align: center;
 }
 .about-us{
     text-align: center;
-    margin-top: 40px;
-    margin-left: 300px;
 }
 .about{
-
     text-align: center;
 }
 .items-footer{
@@ -76,10 +71,10 @@ html{
     display: grid;
     grid-template-columns: (6, 1fr);
 }
-.h6-text{
+.h5-text{
     text-decoration: underline;
+    color: white;
     text-align: center;
-    width: 500px;
 }
 .pop-items{
     color: white;
